@@ -106,7 +106,7 @@ export const loginController = async (req, res) => {
       token,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send({
       success: false,
       message: "Error in login",
@@ -159,7 +159,7 @@ export const testController = (req, res) => {
   try {
     res.send("Protected Routes");
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.send({ error });
   }
 };
@@ -208,7 +208,7 @@ export const getOrdersController = async (req, res) => {
       .populate("buyer", "name");
     res.json(orders);
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send({
       success: false,
       message: "Error WHile Geting Orders",
